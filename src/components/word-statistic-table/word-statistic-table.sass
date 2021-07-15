@@ -1,0 +1,34 @@
+.statistic-table
+  border-collapse: collapse;
+  width: 100%
+  border-radius: 30px
+
+.statistic-table thead th
+  background-color: var(--text-color-primary-light)
+  padding-top: 25px
+  padding-bottom: 25px
+  font-weight: bold
+  text-transform: capitalize
+
+.statistic-table__col
+  padding-top: 10px
+  padding-bottom: 10px
+  font-weight: 500
+
+.statistic-table__row:nth-child(odd)
+  background-color: var(--text-color-primary-light)
+  filter: brightness(80%)
+
+.statistic-table__row:nth-child(even)
+  background-color: var(--text-color-primary-light)
+
+@media screen and ( max-width: 700px )
+  .statistic-table .statistic-table__col
+    font-size: 12px
+
+@media screen and ( max-width: 480px )
+  .statistic-table .statistic-table__col
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+
+  

@@ -1,0 +1,29 @@
+.game-start-button
+  cursor: pointer
+  border: none
+  background-color: transparent
+  background-repeat: no-repeat
+  min-width: 120px
+  min-height: 40px
+  border-radius: 20px
+  background-color: var(--background-gradient-color-secondary)
+  transition: all 0.5s ease
+  display: flex
+  justify-content: center
+  align-items: center
+  justify-content: space-between
+  padding-left: 10px
+  padding-right: 10px
+  font-weight: bold
+  color: var(--text-color-primary-light)
+  & .game-start-button__icon
+    display: inline-block
+    width: 30px
+    height: 30px
+    background-color: white
+    border-radius: 50%
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    transition: all 0.3s ease
+  &:hover .game-start-button__icon
+    transform: translateX(5px)

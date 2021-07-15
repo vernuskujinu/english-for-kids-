@@ -1,0 +1,110 @@
+.word-card__wrapper
+  min-width: 250px
+  width: 100%
+  border-radius: 19px
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s;
+  &:hover
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, .5)
+  &.card--gaussed-correct
+    pointer-events: none
+    opacity: 0.75
+    filter: brightness(50%)
+.word-card
+  width: 100%;
+  min-height: 250px;
+  transform-style: preserve-3d;
+  position: relative;
+
+.word-card.word-card--mode-play
+  // min-height: 250px
+
+.word-card--mode-play .word-card__descriptions-wrapper
+  display: none
+  height: 0
+
+.word-card--mode-play .word-card__image
+  height: 100%
+
+.word-card__front,
+.word-card__back
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+  position: absolute;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  transition: .6s;
+  font-weight: bold
+  text-transform: capitalize
+  background-color: white
+  box-sizing: border-box
+  border: 2px solid var(--text-color-primary-light)
+
+.word-card__back
+  transform: rotateY(180deg);
+
+.word-card.word-card--flipped .word-card__front
+  transform: rotateY(-180deg);
+
+.word-card.word-card--flipped .word-card__back
+  transform: rotateY(1turn);
+
+.word-card__image
+  border-radius: 19px 19px 0 0;
+  width: 100%
+  height: 180px
+  background-size: cover
+  background-position-x: 50%
+  background-repeat: no-repeat
+  transition: all 0.5s ease
+  
+.word-card--mode-play .word-card__image
+  border-radius: 19px
+
+.word-card__descriptions-wrapper
+  display: flex
+  flex-direction: column
+  gap: 10px
+  padding: 15px
+  transition: all 0.5s ease
+
+.word-card__description-wrapper
+  display: flex
+  justify-content: space-between
+  align-items: center
+  gap: 5px
+
+.word-card__description
+  font-weight: bold
+
+.word-card__amount-wrapper
+  display: flex
+  justify-content: space-between
+
+.word-card__amount
+  font-weight: 500
+  color: var(--gradient-color-primary)
+  text-decoration: none
+
+
+.word-card__game-mode
+  width: 20px
+  height: 18px
+  border-radius: 50%
+  align-self: flex-end
+  background-color: var(--gradient-color-primary)
+
+.word-card__flip-button
+  cursor: pointer
+  border: none
+  background-color: transparent
+  background-repeat: no-repeat
+  height: 20px
+  width: 20px
+  transition: all 0.5s ease
+  &:hover
+    transform: rotate(360deg)

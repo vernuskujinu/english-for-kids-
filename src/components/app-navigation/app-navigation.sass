@@ -1,0 +1,85 @@
+.app-navigation__wrapper
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  transition: opacity 0.5s ease;
+  user-select: none
+  opacity: 0
+  pointer-events: none
+  &.shown
+    pointer-events: all
+    opacity: 1
+    background-color: rgba(61, 61, 61, 0.21);
+
+.wrapper-menu
+  position: absolute
+  z-index: 10
+
+.app-navigation
+  position: fixed
+  display: flex
+  flex-direction: column
+  gap: 20px
+  align-items: center
+  max-width: 640px
+  width: 100%
+  height: calc(100vh - 100px)
+  margin: auto
+  top: 0
+  transform: translateX(-100%)
+  z-index: 5
+  transition: all 0.5s ease
+  background-color: var(--gradient-color-secondary)
+  top: 0
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow-y: auto;
+  &.shown 
+    transform: translateX(0)
+
+.app-navigation__login-modal-show-button
+  cursor: pointer
+  background-color: var(--text-color-primary-light)
+  color: var(--text-color-primary)
+  border: none
+  min-width: 90px
+  min-height: 30px
+  border-radius: 5px
+  font-weight: bold
+  transition: all 0.3s ease
+  &:hover
+    background-color: var(--gradient-color-primary)
+
+.app-navigation-list
+  display: flex
+  flex-direction: column
+  padding-left: 0
+  list-style-type: none
+  font-size: 24px
+  font-weight: bold
+
+.app-navigation-list__item
+  position: relative
+.app-navigation-list__link
+  display: inline-block
+  padding-top: 10px
+  padding-bottom: 10px
+  text-decoration: none
+  color: var(--nav-link-color-primary)
+  &::after
+    content: ''
+    position: absolute
+    width: 0
+    height: 3px
+    background-color: var(--gradient-color-primary)
+    left: 0;
+    bottom: -1px;
+    transition: width 0.3s ease
+  &:hover::after,
+  &.navigation-link--active::after
+    width: 50%
+
+  &:visited
+    color: var(--nav-link-color-primary)

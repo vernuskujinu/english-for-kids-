@@ -1,0 +1,8 @@
+{
+  "correctSoundSrc": "./assets/audio/yes.mp3",
+  "incorrecSoundtSrc": "./assets/audio/no.mp3",
+  "looseSoundSrc": "./assets/audio/loose.mp3",
+  "winSoundSrc": "./assets/audio/win.mp3",
+  "winImageSrc": "./assets/svg/win.svg",
+  "looseImageSrc": "./assets/svg/loose.svg"
+}

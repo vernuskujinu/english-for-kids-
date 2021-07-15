@@ -1,0 +1,51 @@
+.app-mode-switcher__label
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+
+.app-mode-switcher__checkbox
+  opacity: 0;
+  width: 0;
+  height: 0;
+
+.app-mode-switcher__background
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--gradient-color-primary);
+  border-radius: 50px
+
+.app-mode-switcher__background,
+.app-mode-switcher__background:before, 
+.app-mode-switcher__background:after 
+  position: absolute;
+  -webkit-transition: .4s;
+  transition: .4s;
+
+.app-mode-switcher__background:before 
+  content: "";
+  height: 30px;
+  width: 30px;
+  left: 10%
+  top: 50%
+  transform: translateY(-50%)
+  background-color: var(--app-mode-switch-thumb-color);
+  border-radius: 50%
+
+.app-mode-switcher__background:after
+  content: "TRAIN" 
+  top: 50%
+  left: calc(100% - 10% - 50px)
+  transform: translateY(-50%)
+  font-weight: bold
+  color: var(--text-color-primary-light)
+
+.app-mode-switcher__checkbox:checked + .app-mode-switcher__background:after
+  content: "PLAY"
+  left: 10%
+
+.app-mode-switcher__checkbox:checked + .app-mode-switcher__background:before 
+  left: calc(100% - 10% - 30px)
